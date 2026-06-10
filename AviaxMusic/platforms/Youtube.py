@@ -5,8 +5,8 @@ from typing import Union
 import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
-from RessoMusic.utils.formatters import time_to_seconds
-from RessoMusic import LOGGER
+from AviaxMusic.utils.formatters import time_to_seconds
+from AviaxMusic import LOGGER
 
 # Safe extraction params to fetch raw format directly
 ytdl_audio_opts = {
@@ -48,7 +48,7 @@ class YouTubeAPI:
         return False
 
     async def download_song(self, link: str) -> str:
-        video_id = link.split('v=')[-1].split('&')[0] if 'v=' in link else link
+        video_id = link.split('v=')[-1].split('&') if 'v=' in link else link
         DOWNLOAD_DIR = "downloads"
         os.makedirs(DOWNLOAD_DIR, exist_ok=True)
         file_path = os.path.join(DOWNLOAD_DIR, f"{video_id}.mp3")
