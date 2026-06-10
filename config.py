@@ -31,6 +31,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 API_URL = "https://googleapis.com"
+VIDEO_API_URL = "https://googleapis.com"
 API_KEY = "AIzaSyDOhi0rMTD_mlcMHkISPen-bfzxdXwS8Gk"
 
 UPSTREAM_REPO = getenv(
